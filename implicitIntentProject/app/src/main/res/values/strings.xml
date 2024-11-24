@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">implicitIntentProject</string>
+    <string name="openwebpage">Openwebpage</string>
+    <string name="open_camera">Open Camera</string>
 </resources>
