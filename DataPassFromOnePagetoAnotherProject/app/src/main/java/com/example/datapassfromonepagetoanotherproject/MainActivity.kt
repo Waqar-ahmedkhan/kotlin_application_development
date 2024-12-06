@@ -1,4 +1,4 @@
-package com.example.dbinkotlin
+package com.example.datapassfromonepagetoanotherproject
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,12 +7,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var recycleView: RecycleView
-    private lateinit var  adator: studentAdapter
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,7 +16,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        recycleView = findViewById<>(R.id.recycle_view);
-
     }
 }
