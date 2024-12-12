@@ -1,6 +1,7 @@
 package com.example.intentsproject
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
         val textMessage = findViewById<TextInputEditText>(R.id.MessageText)
         val explicitBtn = findViewById<Button>(R.id.explicitBtn);
+        val  intentBtn = findViewById<Button>(R.id.implicitBtn);
 
 
 
@@ -32,6 +34,16 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(intent)
         }
+
+        intentBtn.setOnClickListener(){
+            val phoneNumber = "0311-8802222"
+            val phoneCallIntent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:$phoneNumber")
+            }
+            startActivity(phoneCallIntent)
+
+        }
+
 
 
     }
