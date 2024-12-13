@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.RecycleViewNewApp" parent="Base.Theme.RecycleViewNewApp" />
+    
+    
+    <style name="SoftCorner">
+        <item name="cornerFamily"/>
+        <item name="cornerSize"/>
+        <item name="color"> @color/white</item>
+    </style>
+
 </resources>

@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -25,12 +26,49 @@ class MainActivity : AppCompatActivity() {
 
         var newImagesArry = arrayOf(
             R.drawable.img1,
-            R.drawable.img2
+            R.drawable.img2,
+            R.drawable.img1,
+            R.drawable.img1,
+            R.drawable.img1,
+            R.drawable.img1,
+            R.drawable.img1,
+            R.drawable.img1,
+            R.drawable.img1,
+
         )
 
         var newHeadingArray = arrayOf(
             "Just checking ",
             "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+            "just checking",
+
         )
+
+
+        // RecycyleView scrolling should be horizental or vertical
+        myRecycleView.layoutManager =  LinearLayoutManager(this)
+
+        newsArrayList = arrayListOf<News>()
+
+
+        for(index in newImagesArry.indices){
+            val news = News(newHeadingArray[index], newImagesArry[index]);
+
+            newsArrayList.add(news);
+
+        }
+
+        myRecycleView.adapter = MyAdapter(newsArrayList, this);
     }
+
+
+
 }
